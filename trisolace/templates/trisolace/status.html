@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+  	<base href="/">
+</head>
+<body>
+
+
+
+<br>
+
+<div class="row">
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="total-orders">
+			  	<div class="card-header">
+			  		<h5 class="card-title"><i class="fas fa-chart-line mr-3 text-danger"></i>Total sponsorships</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="text-center">{{total_orders}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="orders-delivered">
+			  	<div class="card-header">
+
+			  		<h5 class="card-title"><i class="fas fa-money-check-alt mr-3 text-success"></i>Orders Paidout</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="text-center">{{paidout}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="orders-pending">
+			  	<div class="card-header">
+			  		<h5 class="card-title"><i class="fas fa-tasks mr-3 text-warning"></i>Orders Pending</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="text-center">{{pending}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

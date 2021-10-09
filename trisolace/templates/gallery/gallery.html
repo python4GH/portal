@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Trisolice Video Gallery|</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+    <!--for navbar-->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+     <!--end link navbar-->
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <style>
+    .pb-video-container {
+        padding-top: 20px;
+        background: #f1f6ef;
+        font-family: Lato;
+    }
+
+    .pb-video {
+        border: 1px solid #e6e6e6;
+        padding: 5px;
+    }
+
+        .pb-video:hover {
+            background: #f1f6ef;
+        }
+
+    .pb-video-frame {
+        transition: width 2s, height 2s;
+    }
+
+        .pb-video-frame:hover {
+            height: 300px;
+        }
+
+    .pb-row {
+        margin-bottom: 10px;
+    }
+    body {
+
+  
+  		background:#59981A;}
+  	.h1{
+  	    text-align:center;
+  	}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <!-- /.navbar -->
+
+<div class="page-header">
+        <div class="image">
+          <img src="{% static 'images/snail/logo.jpg' %}" class="img-circle elevation-2" width="10%" height="20%" alt="User Image">
+        </div>
+
+    <h1 style="text-align:center">Trisolice <small>Video Gallery</small></h1>
+</div>
+
+<!-- Video Gallery - START -->
+<div class="container-fluid pb-video-container">
+    <div class="col-md-10 offset-md-1">
+        <h3 class="text-xs-center">check out our Video Gallery</h3>
+        <div class="row pb-row">
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/DmPIK6nrLpI?ecver=1" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center">Snail Farming Investment </label>
+            </div>
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/HqaXfTahrAE?ecver=1" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center">Greenhouse for snails </label>
+            </div>
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame " width="100%" height="230" src=" https://www.youtube.com/embed/-AzOs4KLcjc?ecver=1" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center">Snail Farming Ghana</label>
+            </div>
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/ni9r3tH4I28?ecver=1" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center">Snail pest control</label>
+            </div>
+        </div>
+        <div class="row pb-row">
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/9gS5avIs6nc?ecver=1" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center">Snails Block pens</label>
+            </div>
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/1pIutvMBvsU?ecver=1" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center">Free snail education</label>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+</body>
+</html>

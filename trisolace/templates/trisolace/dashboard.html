@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'dashboard/css/styles.css' %}">
+
+     <title> tricolase farms</title>
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+
+      <span class="logo_name">Trisolace Farms </span>
+
+    </div>
+    <br>
+    <br>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html" class="active">
+            <i class="fas fa-columns"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'products' %}">
+            <i class="fas fa-plus-circle"></i>
+            <span class="links_name">Sponsor a CrowdFarm</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'account' %}">
+            <i class="far fa-edit"></i>
+            <span class="links_name">My Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'gallery' %}">
+            <i class="fas fa-eraser"></i>
+            <span class="links_name">Gallery</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'news' %}">
+            <i class="fas fa-minus-circle"></i>
+            <span class="links_name">News Room</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'faq' %}">
+            <i class="fas fa-minus-circle"></i>
+            <span class="links_name">FAQ</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'logout' %}">
+            <i class="fas fa-minus-circle"></i>
+            <span class="links_name">Logout</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class="fas fa-columns"></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="profile-details">
+        <img src="{% static 'images/snail/logo.jpg' %}" alt="Trisolace Farms">
+        <span class="admin_name"> {{request.user}}</span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="overview-boxes">
+        <div class="box description">
+          <div class="right-side">
+            <div class="box-topic" style="color: white;">Total Items</div>
+            <div class="number ti"></div>
+          </div>
+        </div>
+        <div class="box description">
+          <div class="right-side">
+            <div class="box-topic"style="color: white;">Total Categories</div>
+            <div class="number tc"></div>
+          </div>
+        </div>
+        <div class="box description">
+          <div class="right-side">
+            <div class="box-topic" style="color: white;">Total Quantity</div>
+            <div class="number tq"></div>
+          </div>
+        </div>
+      </div>
+      <div class="overview-boxes" id="descStock">
+
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h5>CUSTOMERS:</h5>
+          <hr>
+          <div class="card card-body">
+            <a class="btn btn-primary  btn-sm btn-block" href="">Customer Table</a>
+            <table class="table table-hover table-striped ">
+              <tr>
+                <th></th>
+                <th>Customer</th>
+                
+              </tr>
+      
+              {% for customer in customers %}
+                <tr>
+                  <td><a class="btn " href="{% url 'customer' customer.id %}"><i class="fas fa-eye"></i></a></td>
+                  <td>{{customer.name}}</td>
+                  
+                </tr>
+              {% endfor %}
+      
+            </table>
+          </div>
+        </div>
+      
+        <div class="col-md-7">
+          <h5>LAST 5 ORDERS</h5>
+          <hr>
+          <div class="card card-body">
+            
+            <table class="table table-hover table-striped ">
+              <tr>
+                <th>Product</th>
+                <th>Date Orderd</th>
+                <th>Price</th>
+                <th>Duration</th>
+                
+                
+              </tr>
+      
+              {% for order in orders %}
+                <tr>
+                  <td>{{order.product}}</td>
+                  <td>{{order.date_created}}</td>
+                  <td>{{order.amount}}</td>
+                  <td>{{order.duration}}</td>
+                  
+                  
+      
+                  
+      
+                </tr>
+              {% endfor %}
+      
+          
+            </table>
+          </div>
+
+  </section>
+ <script src="{static 'dashboard/script/index.js'}"></script>
+</body>
+</html>

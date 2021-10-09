@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <div class="sidebar" style="background-color:green">
+      <div class="logo-details">
+        <i class='bx bxl-c-plus-plus'></i>
+
+        <span class="logo_name">Trisolace Farms </span>
+
+      </div>
+        <br>
+        <br>
+        <ul class="nav-links">
+          <li>
+            <a href="{% url 'home'%}" class="active">
+              <i class="fas fa-columns"></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'products' %}">
+              <i class="fas fa-plus-circle"></i>
+              <span class="links_name">Sponsor a CrowdFarm</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'account' %}">
+              <i class="far fa-edit"></i>
+              <span class="links_name">My Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'gallery' %}">
+              <i class="fas fa-eraser"></i>
+              <span class="links_name">Gallery</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'news' %}">
+              <i class="fas fa-minus-circle"></i>
+              <span class="links_name">News Room</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'faq' %}">
+              <i class="fas fa-minus-circle"></i>
+              <span class="links_name">FAQ</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'logout' %}">
+              <i class="fas fa-minus-circle"></i>
+              <span class="links_name">Logout</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+    <section class="home-section">
+      
+
+      <div class="home-content">
+        <div class="overview-boxes">
+          <div class="box description">
+            <div class="right-side">
+              <div class="box-topic" style="color: white;">Total Items</div>
+              <div class="number ti"></div>
+            </div>
+          </div>
+          <div class="box description">
+            <div class="right-side">
+              <div class="box-topic" style="color: white;">Total Categories</div>
+              <div class="number tc"></div>
+            </div>
+          </div>
+          <div class="box description">
+            <div class="right-side">
+              <div class="box-topic" style="color: white;">Total Quantity</div>
+              <div class="number tq"></div>
+            </div>
+          </div>
+        </div>
+        <div class="overview-boxes" id="descStock">
+
+        </div>
+
+
+
+      
