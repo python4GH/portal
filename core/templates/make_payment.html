@@ -30,7 +30,7 @@
         let obj = {
             key: '{{ paystack_public_key }}',
             email: '{{ payment.email }}',
-            amount: {{ payment.amount_value }},
+            amount: '{{ payment.amount_value }}',
             ref:ref,    
             callback: function (response) {
                 window.location.href = "{% url 'core:verify-payment' payment.ref %}?amount={{ payment.amount_value }}&trxref=" + response.trxref
