@@ -123,7 +123,7 @@ scikit-image==0.18.1
 serverfiles==0.3.1
 simplegeneric
 
-sip==4.19.13
+sip
 
 sklearn==0.0
 smmap==4.0.0
