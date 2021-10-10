@@ -121,7 +121,7 @@ requests-oauthlib==1.3.0
 scikit-image==0.18.1
 
 serverfiles==0.3.1
-simplegeneric==0.8.1
+simplegeneric
 
 sip==4.19.13
 
