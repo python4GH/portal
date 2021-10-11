@@ -26,16 +26,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'slnb*q1wdk&-yk)v$+$*xs78l@9jes9*_9rn)4e!8=_-1h*@zv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ['.herokuapp.com',"127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -141,6 +140,7 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 PAYSTACK_SECRET_KEY = 'sk_test_782346e81ddea4d7c084a9d3e749096f671b7cd9'
 PAYSTACK_PUBLIC_KEY = 'pk_test_52998a0b81d8808b15cbc5f0354f74fc21ddccf4'
