@@ -34,6 +34,8 @@ ALLOWED_HOSTS = ["127.0.0.1"]
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -137,6 +140,7 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 PAYSTACK_SECRET_KEY = 'sk_test_782346e81ddea4d7c084a9d3e749096f671b7cd9'
 PAYSTACK_PUBLIC_KEY = 'pk_test_52998a0b81d8808b15cbc5f0354f74fc21ddccf4'

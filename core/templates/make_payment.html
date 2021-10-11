@@ -6,11 +6,9 @@
             <div class="bg-white shadow p-5">
                 <h5 class="font-large-fixed">Amount : <span class=" font-large-fixed font-weight-bold color-primary">GH {{ payment.amount }}</span></h5>
                 <hr>
-                <form>
-                    <script src="https://js.paystack.co/v1/inline.js"></script>
-                    <button class="btn btn-large btn-success waves-effect waves-light" id="django-paystack-button" type="button" onclick="payWithPaystack()"> Pay </button>
-                    <a href="{{ payment.get_delete_url }}" id="delete-payment" class="btn btn-danger">Delete</a>
-                </form>
+                <script src="https://js.paystack.co/v1/inline.js"></script>
+                <button class="btn btn-large btn-success waves-effect waves-light" id="django-paystack-button" type="button" onclick="payWithPaystack()"> Pay </button>
+                <a href="{{ payment.get_delete_url }}" id="delete-payment" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
@@ -30,7 +28,7 @@
         let obj = {
             key: '{{ paystack_public_key }}',
             email: '{{ payment.email }}',
-            amount: {{ payment.amount_value }},
+            amount: '{{ payment.amount_value }}',
             ref:ref,    
             callback: function (response) {
                 window.location.href = "{% url 'core:verify-payment' payment.ref %}?amount={{ payment.amount_value }}&trxref=" + response.trxref
